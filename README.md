@@ -15,5 +15,3 @@ python call_graph.py      \
 ```
 
 (Where `dot` is from https://www.graphviz.org/documentation/)
-
-(Standard python setup distribution boilerplate is a shame - why does it have to be at top leve of project?)
