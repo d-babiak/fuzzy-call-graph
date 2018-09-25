@@ -6,3 +6,6 @@ venv
 .idea/
 .DS_Store
 .Python
+dist/
+*.egg-info/
+build/
