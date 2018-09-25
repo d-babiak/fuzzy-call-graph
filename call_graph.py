@@ -80,7 +80,7 @@ def parse_bodies(lines: List[str]) -> List[Body]:
     return bodies
     
   
-def main(pathname: str):
+def parse_functions(pathname: str):
     import sys
 
     with open(pathname) as fp:
@@ -98,8 +98,8 @@ def main(pathname: str):
     ]
     return fs
 
-def draw(pathname: str):
-    all_functions: List[Function] = main(pathname)
+def generate_call_graph(pathname: str):
+    all_functions: List[Function] = parse_functions(pathname)
 
     edges = [ 
         f'  {fn.name} -> {g.name};' 
@@ -111,5 +111,9 @@ def draw(pathname: str):
         print(edge)
     print('}')
 
+
+def main():
+    generate_call_graph(sys.argv[1])
+
 if __name__ == '__main__':
-    draw(sys.argv[1])
+    draw(sys.argv[1]) # ...no?

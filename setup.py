@@ -16,7 +16,7 @@ URL = 'https://github.com/d-babiak/fuzzy-call-graph'
 EMAIL = 'd.babiak@gmail.com'
 AUTHOR = 'dmb'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 
 REQUIRED = []
 
@@ -76,12 +76,15 @@ setup(
     version=about['__version__'],
     description=DESCRIPTION,
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    #long_description_content_type='text/markdown',
     author=AUTHOR,
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
     py_modules=['call_graph'],
+    entry_points={
+        'console_scripts': ['call-graph=call_graph:main'],
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
