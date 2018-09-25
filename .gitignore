@@ -1,0 +1,8 @@
+.vscode
+venv
+*.swo
+*.pyc
+*.swp
+.idea/
+.DS_Store
+.Python
